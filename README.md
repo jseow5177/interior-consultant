@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">My Team Page</h1>
+<h1 align="center">Interior Consultant</h1>
 
 ## Web View
 
