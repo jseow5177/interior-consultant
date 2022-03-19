@@ -1,0 +1,396 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@500;700&family=Montserrat:wght@400;500;700&display=swap");
+
+:root {
+  --color-white: #ffffff;
+  --color-gray: #a9a9a9;
+  --color-black: #181719;
+
+  --sidebar-transition-time: 0.4s;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+/* Remove button default css */
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.material-icons {
+  font-size: 28px;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+  overflow: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 6rem;
+}
+
+header,
+footer {
+  flex: none;
+}
+
+main {
+  flex: auto;
+}
+
+/* ========== HEADER ========== */
+
+header {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 3rem;
+}
+
+.appbar {
+  display: flex;
+  flex-direction: row;
+}
+
+.appbar > a {
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 2.5rem;
+  padding: 1rem 0;
+}
+
+.appbar > a:last-child {
+  margin-right: 0;
+}
+
+.appbar > a:hover,
+.appbar > a:focus {
+  border-bottom: 2px solid var(--color-white);
+}
+
+.menu-btn {
+  display: none;
+}
+
+/* hide when sidebar opens */
+.menu-btn.hide {
+  display: none;
+}
+
+.logo {
+  border: 2px solid var(--color-white);
+  padding: 0.8rem;
+  width: max-content;
+}
+
+.logo > h1 {
+  font-family: "Crimson Pro", serif;
+  font-size: 18px;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+/* ========== SIDEBAR ========== */
+
+.sidebar {
+  background-color: var(--color-black);
+  display: none; /* hide by default */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+
+  height: 100%;
+  width: 0;
+  transition: all var(--sidebar-transition-time) ease-in-out;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.sidebar.open {
+  width: 100%;
+}
+
+.sidebar > a {
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 0.8rem 0;
+  margin: 0.8rem 0;
+}
+
+.sidebar > a:hover,
+.sidebar > a:focus {
+  border-bottom: 2px solid var(--color-white);
+}
+
+.sidebar.open > .close-btn {
+  opacity: 1;
+  transition: var(--sidebar-transition-time);
+}
+
+.close-btn {
+  margin: 2.5rem 4rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0; /* hide by default */
+}
+
+/* ========== MAIN ========== */
+
+main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.intro-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+}
+
+.intro-text > h2 {
+  font-family: "Lora", serif;
+  font-weight: 500;
+  font-size: 48px;
+  margin-bottom: 2rem;
+}
+
+.intro-text > p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35px;
+  margin-bottom: 1rem;
+}
+
+.cta {
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  width: fit-content;
+  padding-bottom: 0.3rem;
+}
+
+.cta:hover,
+.cta:focus {
+  border-bottom: 2px solid var(--color-white);
+}
+
+.design-img {
+  align-items: flex-end;
+  position: relative;
+  flex-direction: column;
+  display: flex;
+  width: 60%;
+
+  margin-bottom: -60px;
+}
+
+.design-img > img {
+  width: 70%;
+}
+
+.artist {
+  background-color: var(--color-black);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  width: 30%;
+
+  position: relative;
+  bottom: 60px;
+  right: 20px;
+}
+
+.artist > p {
+  font-family: "Lora", serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.artist-intro {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.artist-intro-img {
+  border-radius: 50%;
+  width: 20%;
+  margin-right: 1rem;
+}
+
+.artist-intro-text > h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+
+.artist-intro-text > p {
+  color: var(--color-gray);
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* ========== FOOTER ========== */
+
+footer {
+  text-align: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+footer > p {
+  color: var(--color-gray);
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ========== MEDIA QUERIES (MEDIUM DEVICES) ========== */
+
+@media screen and (max-width: 1024px) {
+  body {
+    padding: 2rem 4rem;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro-text,
+  .design-img {
+    width: 100%;
+  }
+
+  .intro-text {
+    margin-bottom: 2rem;
+  }
+
+  .design-img > img {
+    width: 100%;
+  }
+
+  .sidebar {
+    display: flex;
+  }
+
+  .artist {
+    width: 50%;
+  }
+
+  .appbar {
+    display: none;
+  }
+
+  .menu-btn {
+    display: inline-block;
+  }
+}
+
+/* ========== MEDIA QUERIES (SMALL DEVICES) ========== */
+
+@media screen and (max-width: 600px) {
+  body {
+    padding: 2rem 2rem;
+  }
+
+  .material-icons {
+    font-size: 24px;
+  }
+
+  .intro-text > h2 {
+    font-size: 32px;
+  }
+
+  .intro-text > p {
+    font-size: 16px;
+    line-height: 23px;
+  }
+
+  .cta {
+    font-size: 14px;
+  }
+
+  .logo {
+    padding: 0.5rem;
+  }
+
+  .logo > h1 {
+    font-size: 14px;
+  }
+
+  .sidebar > a {
+    font-size: 16px;
+    padding: 0.6rem 0;
+    margin: 0.6rem 0;
+  }
+
+  .artist {
+    width: 75%;
+  }
+
+  .artist > p {
+    font-size: 15px;
+  }
+
+  .artist-intro-text > h3 {
+    font-size: 12px;
+  }
+
+  .artist-intro-text > p {
+    font-size: 10px;
+  }
+
+  .close-btn {
+    margin-right: 2rem;
+  }
+
+  footer > p {
+    font-size: 12px;
+  }
+}

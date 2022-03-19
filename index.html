@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./index.css" />
+  <title>Interior Design</title>
+</head>
+<body>
+  <header>
+    <!-- Logo -->
+    <div class="logo">
+      <h1>This Interior</h1>
+    </div>
+    <!-- Appbar -->
+    <div class="appbar">
+      <a>Home</a>
+      <a>Collection</a>
+      <a>About</a>
+      <a>Contact</a>
+    </div>
+    <!-- Menu Button -->
+    <button class="menu-btn" onclick="openSideBar()">
+      <span class="material-icons">menu</span>
+    </button>
+  </header>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <button class="close-btn" onclick="closeSideBar()">
+      <span class="material-icons">close</span>
+    </button>
+    <a>Home</a>
+    <a>Collection</a>
+    <a>About</a>
+    <a>Contact</a>
+  </div>
+  <main>
+    <!-- Intro Text -->
+    <section class="intro-text">
+      <h2>Modern interior</h2>
+      <p>A full-Service residential & commercial interior design and staging company offering professional organizing & eco-services.</p>
+      <a class="cta">Read more</a>
+    </section>
+    <!-- Image -->
+    <section class="design-img">
+      <img src="./photo1.png" alt="design"/>
+      <div class="artist">
+        <div class="artist-intro">
+          <img src="./photo2.png" class="artist-intro-img"/>
+          <div class="artist-intro-text">
+            <h3>Aliza Webber</h3>
+            <p>Interior designer</p>
+          </div>
+        </div>
+        <p>Designed in 2020 by Aliza Webber</p>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer>
+    <p>created by jonathan.seow - devChallenges.io</p>
+  </footer>
+  <script src="./index.js"></script>
+</body>
+</html>
